@@ -39,18 +39,13 @@ image: CAT_1
                 }
             ];
 
-const StoriesComponent = stories.map((story) => {
-    return ( 
-    <Story {...story}/>
-    )
-}); 
-
-const App = (props) => {
-return (
+const App = (props) => (
     <div>
-        {StoriesComponent}              
+        {stories.map((story) => ( 
+    <Story {...story} />
+    )
+)}              
     </div>
-)
-}
+);
 export default App;
 
